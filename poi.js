@@ -1,24 +1,25 @@
-// KosMedan - POI V58 - SATU SUMBER
-// File ini dipakai bersama oleh: Admin V4, Cari Kos, Detail Kos
-// Dashboard V51 TIDAK pakai file ini (Dashboard tidak hitung jarak, GPS dicek Admin).
+// KosMedan - POI V59 - SATU SUMBER
+// File ini dipakai bersama oleh: Admin V5.5, Cari Kos, Detail Kos
 // Cara pakai: load file ini SEBELUM script utama, dengan <script src="URL_POI_JS"></script>
 // Setelah itu POI tersedia di window.KM_POI dan window.POI_ALL.
 // Kalau ada POI yang berubah, edit HANYA file ini. Jangan copy-paste array POI ke file lain.
-// Total: 77 POI = 26 Kampus + 26 RS + 15 Mall + 10 Transport. Bidadari sudah dihapus (tidak ada di Medan).
+// V59 FIX: Poltekpar + RS Haji dibalikin ke Medan Estate (tadinya ke geser ke Aksara, bikin Nazeeha salah)
+// RS Adam Malik dibalikin ke Sunggal, UMSU / UMA / UNPRI / UISU dibenerin.
+// Total: 77 POI = 26 Kampus + 26 RS + 15 Mall + 10 Transport.
 (function(){
   var POI = [
     // KAMPUS - 26
     {nama:"USU",lat:3.562,lng:98.658,cat:"KAMPUS"},
     {nama:"UNIMED",lat:3.607528,lng:98.71675,cat:"KAMPUS"},
-    {nama:"UMSU",lat:3.5885,lng:98.694,cat:"KAMPUS"},
+    {nama:"UMSU",lat:3.5785,lng:98.6845,cat:"KAMPUS"},
     {nama:"UINSU",lat:3.604994,lng:98.721378,cat:"KAMPUS"},
     {nama:"POLMED",lat:3.562,lng:98.659,cat:"KAMPUS"},
-    {nama:"UISU",lat:3.568,lng:98.693,cat:"KAMPUS"},
-    {nama:"UMA",lat:3.55,lng:98.685,cat:"KAMPUS"},
+    {nama:"UISU",lat:3.5623,lng:98.6938,cat:"KAMPUS"},
+    {nama:"UMA",lat:3.5795,lng:98.6865,cat:"KAMPUS"},
     {nama:"UNPAB",lat:3.590239,lng:98.645394,cat:"KAMPUS"},
     {nama:"Nommensen",lat:3.595,lng:98.682,cat:"KAMPUS"},
     {nama:"UNIKA",lat:3.544689,lng:98.621723,cat:"KAMPUS"},
-    {nama:"UNPRI",lat:3.573,lng:98.645,cat:"KAMPUS"},
+    {nama:"UNPRI",lat:3.5985,lng:98.6775,cat:"KAMPUS"},
     {nama:"Potensi Utama",lat:3.658,lng:98.685,cat:"KAMPUS"},
     {nama:"UNIVA",lat:3.5455,lng:98.701,cat:"KAMPUS"},
     {nama:"Darma Agung",lat:3.57892,lng:98.664713,cat:"KAMPUS"},
@@ -29,13 +30,13 @@
     {nama:"Al Azhar",lat:3.585,lng:98.70,cat:"KAMPUS"},
     {nama:"UNHAR",lat:3.576,lng:98.685,cat:"KAMPUS"},
     {nama:"Poltekkes",lat:3.53,lng:98.60,cat:"KAMPUS"},
-    {nama:"Poltekpar",lat:3.61,lng:98.71,cat:"KAMPUS"},
+    {nama:"Poltekpar",lat:3.5285,lng:98.6905,cat:"KAMPUS"},
     {nama:"LP3M",lat:3.5805,lng:98.6685,cat:"KAMPUS"},
     {nama:"AMIK Tunas",lat:3.59,lng:98.675,cat:"KAMPUS"},
     {nama:"STBA PIA",lat:3.586,lng:98.694,cat:"KAMPUS"},
     {nama:"UPMI",lat:3.58,lng:98.66,cat:"KAMPUS"},
     // RS - 26
-    {nama:"RS Adam Malik",lat:3.518291,lng:98.608373,cat:"RS"},
+    {nama:"RS Adam Malik",lat:3.5985,lng:98.6585,cat:"RS"},
     {nama:"RS Pirngadi",lat:3.598097,lng:98.688395,cat:"RS"},
     {nama:"RS Advent",lat:3.590231,lng:98.649835,cat:"RS"},
     {nama:"RS Columbia",lat:3.592,lng:98.678,cat:"RS"},
@@ -44,7 +45,7 @@
     {nama:"RS Murni Teguh",lat:3.592,lng:98.68,cat:"RS"},
     {nama:"RS Mitra Medika",lat:3.59,lng:98.66,cat:"RS"},
     {nama:"RS USU",lat:3.567988,lng:98.657492,cat:"RS"},
-    {nama:"RS Haji",lat:3.613508,lng:98.714609,cat:"RS"},
+    {nama:"RS Haji",lat:3.5405,lng:98.6925,cat:"RS"},
     {nama:"RS Royal Prima",lat:3.588,lng:98.664,cat:"RS"},
     {nama:"RS Permata Bunda",lat:3.575,lng:98.685,cat:"RS"},
     {nama:"RS Bhayangkara",lat:3.57,lng:98.66,cat:"RS"},
@@ -91,7 +92,7 @@
   ];
   window.KM_POI = POI;
   window.POI_ALL = POI;
-  window.KM_POI_VERSION = "V58";
+  window.KM_POI_VERSION = "V59";
   window.KM_POI_COUNT = POI.length;
   function haversineMeter(a,b,c,d){
     var R=6371000, toRad=function(x){return x*Math.PI/180;};
