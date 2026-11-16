@@ -1,10 +1,11 @@
-// KosMedan - POI V59 - SATU SUMBER
+// KosMedan - POI V60 - SATU SUMBER
 // File ini dipakai bersama oleh: Admin V5.5, Cari Kos, Detail Kos
 // Cara pakai: load file ini SEBELUM script utama, dengan <script src="URL_POI_JS"></script>
 // Setelah itu POI tersedia di window.KM_POI dan window.POI_ALL.
 // Kalau ada POI yang berubah, edit HANYA file ini. Jangan copy-paste array POI ke file lain.
-// V59 FIX: Poltekpar + RS Haji dibalikin ke Medan Estate (tadinya ke geser ke Aksara, bikin Nazeeha salah)
-// RS Adam Malik dibalikin ke Sunggal, UMSU / UMA / UNPRI / UISU dibenerin.
+// V60 FIX: UPMI dibenerin ke Jl Teladan (tadinya 3.58,98.66 di Padang Bulan, bikin BENHOUSE jadi UPMI - padahal Google 5,4 km)
+// RS Mitra Sejati dibenerin ke Jl AH Nasution Medan Johor (tadinya 3.575,98.65 di Padang Bulan, bikin BENHOUSE jadi Mitra Sejati)
+// V59: Poltekpar + RS Haji dibalikin ke Medan Estate, RS Adam Malik ke Sunggal, UMSU / UMA / UNPRI / UISU dibenerin.
 // Total: 77 POI = 26 Kampus + 26 RS + 15 Mall + 10 Transport.
 (function(){
   var POI = [
@@ -34,7 +35,7 @@
     {nama:"LP3M",lat:3.5805,lng:98.6685,cat:"KAMPUS"},
     {nama:"AMIK Tunas",lat:3.59,lng:98.675,cat:"KAMPUS"},
     {nama:"STBA PIA",lat:3.586,lng:98.694,cat:"KAMPUS"},
-    {nama:"UPMI",lat:3.58,lng:98.66,cat:"KAMPUS"},
+    {nama:"UPMI",lat:3.567559,lng:98.690563,cat:"KAMPUS"},
     // RS - 26
     {nama:"RS Adam Malik",lat:3.5985,lng:98.6585,cat:"RS"},
     {nama:"RS Pirngadi",lat:3.598097,lng:98.688395,cat:"RS"},
@@ -49,7 +50,7 @@
     {nama:"RS Royal Prima",lat:3.588,lng:98.664,cat:"RS"},
     {nama:"RS Permata Bunda",lat:3.575,lng:98.685,cat:"RS"},
     {nama:"RS Bhayangkara",lat:3.57,lng:98.66,cat:"RS"},
-    {nama:"RS Mitra Sejati",lat:3.575,lng:98.65,cat:"RS"},
+    {nama:"RS Mitra Sejati",lat:3.540994,lng:98.67987,cat:"RS"},
     {nama:"RS Sufina Azis",lat:3.595,lng:98.69,cat:"RS"},
     {nama:"RS Estomihi",lat:3.57,lng:98.69,cat:"RS"},
     {nama:"RS Martha Friska",lat:3.65,lng:98.68,cat:"RS"},
@@ -92,7 +93,7 @@
   ];
   window.KM_POI = POI;
   window.POI_ALL = POI;
-  window.KM_POI_VERSION = "V59";
+  window.KM_POI_VERSION = "V60";
   window.KM_POI_COUNT = POI.length;
   function haversineMeter(a,b,c,d){
     var R=6371000, toRad=function(x){return x*Math.PI/180;};
