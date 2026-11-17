@@ -1,15 +1,18 @@
-// KosMedan - POI V60 - SATU SUMBER
+// KosMedan - POI V61 - SATU SUMBER
 // File ini dipakai bersama oleh: Admin V5.5, Cari Kos, Detail Kos
 // Cara pakai: load file ini SEBELUM script utama, dengan <script src="URL_POI_JS"></script>
 // Setelah itu POI tersedia di window.KM_POI dan window.POI_ALL.
 // Kalau ada POI yang berubah, edit HANYA file ini. Jangan copy-paste array POI ke file lain.
+// V61 FIX: UNPRI dibenerin - tadinya 1 titik salah di 3.5985,98.6775 (geser 2 km ke timur, deket RS Sari Mutiara)
+// Sekarang jadi 3 titik bener dari Google: Sampul (Utama) 3.598865,98.652759 / Sekip 3.596737,98.665097 / Danau Singkarak 3.604054,98.654208
+// Bukti: Kos Solo 3.59861,98.65912 ke UNPRI Sampul cuma 707m, bukan ke USU 4km. Jadi Kos Solo sekarang kebaca UNPRI.
 // V60 FIX: UPMI dibenerin ke Jl Teladan (tadinya 3.58,98.66 di Padang Bulan, bikin BENHOUSE jadi UPMI - padahal Google 5,4 km)
 // RS Mitra Sejati dibenerin ke Jl AH Nasution Medan Johor (tadinya 3.575,98.65 di Padang Bulan, bikin BENHOUSE jadi Mitra Sejati)
 // V59: Poltekpar + RS Haji dibalikin ke Medan Estate, RS Adam Malik ke Sunggal, UMSU / UMA / UNPRI / UISU dibenerin.
-// Total: 77 POI = 26 Kampus + 26 RS + 15 Mall + 10 Transport.
+// Total: 79 POI = 28 Kampus + 26 RS + 15 Mall + 10 Transport.
 (function(){
   var POI = [
-    // KAMPUS - 26
+    // KAMPUS - 28
     {nama:"USU",lat:3.562,lng:98.658,cat:"KAMPUS"},
     {nama:"UNIMED",lat:3.607528,lng:98.71675,cat:"KAMPUS"},
     {nama:"UMSU",lat:3.5785,lng:98.6845,cat:"KAMPUS"},
@@ -20,7 +23,9 @@
     {nama:"UNPAB",lat:3.590239,lng:98.645394,cat:"KAMPUS"},
     {nama:"Nommensen",lat:3.595,lng:98.682,cat:"KAMPUS"},
     {nama:"UNIKA",lat:3.544689,lng:98.621723,cat:"KAMPUS"},
-    {nama:"UNPRI",lat:3.5985,lng:98.6775,cat:"KAMPUS"},
+    {nama:"UNPRI",lat:3.598865,lng:98.652759,cat:"KAMPUS"},
+    {nama:"UNPRI Sekip",lat:3.596737,lng:98.665097,cat:"KAMPUS"},
+    {nama:"UNPRI Danau Singkarak",lat:3.604054,lng:98.654208,cat:"KAMPUS"},
     {nama:"Potensi Utama",lat:3.658,lng:98.685,cat:"KAMPUS"},
     {nama:"UNIVA",lat:3.5455,lng:98.701,cat:"KAMPUS"},
     {nama:"Darma Agung",lat:3.57892,lng:98.664713,cat:"KAMPUS"},
@@ -93,7 +98,7 @@
   ];
   window.KM_POI = POI;
   window.POI_ALL = POI;
-  window.KM_POI_VERSION = "V60";
+  window.KM_POI_VERSION = "V61";
   window.KM_POI_COUNT = POI.length;
   function haversineMeter(a,b,c,d){
     var R=6371000, toRad=function(x){return x*Math.PI/180;};
