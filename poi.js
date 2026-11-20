@@ -1,8 +1,7 @@
-// KosMedan - POI V62 - SATU SUMBER
+// KosMedan - POI V63 - SATU SUMBER
 // File ini dipakai bersama oleh: Admin, Cari Kos, Detail Kos
-// V62 FIX Google: UMSU, UMA pecah 2 kampus, Potensi Utama, RS Adam Malik, RS Eshmun, RS Haji, RS Murni Teguh, RS Bhayangkara, Hermes, Cambridge, Millennium, Medan Fair, USU/POLMED dipisah
-// V62 FIX Kategori: Podomoro City HAPUS dari TRANSPORT (itu Mall, udah ada Delipark di MALL). Istana Maimun / Masjid Raya / Lapangan Merdeka / Merdeka Walk tetap di TRANSPORT sebagai landmark, jangan dipakai sebagai patokan transport utama.
-// Total: 79 POI = 29 Kampus + 26 RS + 15 Mall + 9 Transport.
+// V63 FIX Transport: Istana Maimun / Masjid Raya / Lapangan Merdeka / Merdeka Walk DIHAPUS dari TRANSPORT. Itu LANDMARK, bukan tempat naik angkot. Transport cuma 5: Stasiun Medan, Terminal Amplas, Terminal Pinang Baris, Kualanamu, Belawan.
+// Total: 75 POI = 29 Kampus + 26 RS + 15 Mall + 5 Transport.
 (function(){
   var POI = [
     // KAMPUS - 29
@@ -78,20 +77,16 @@
     {nama:"Focal Point",lat:3.58,lng:98.676,cat:"MALL"},
     {nama:"Millennium",lat:3.615452,lng:98.649702,cat:"MALL"},
     {nama:"Yuki Simpang",lat:3.54,lng:98.70,cat:"MALL"},
-    // TRANSPORT - 9 (Podomoro DIHAPUS, itu Mall)
+    // TRANSPORT - 5 ONLY (Landmark DIHAPUS: Istana Maimun, Masjid Raya, Lapangan Merdeka, Merdeka Walk bukan transport)
     {nama:"Terminal Amplas",lat:3.539207,lng:98.718201,cat:"TRANSPORT"},
     {nama:"Terminal Pinang Baris",lat:3.588969,lng:98.610167,cat:"TRANSPORT"},
     {nama:"Stasiun Medan",lat:3.590878,lng:98.679742,cat:"TRANSPORT"},
     {nama:"Kualanamu",lat:3.642,lng:98.885,cat:"TRANSPORT"},
-    {nama:"Belawan",lat:3.775,lng:98.69,cat:"TRANSPORT"},
-    {nama:"Lapangan Merdeka",lat:3.59025,lng:98.678586,cat:"TRANSPORT"},
-    {nama:"Masjid Raya",lat:3.575111,lng:98.687321,cat:"TRANSPORT"},
-    {nama:"Istana Maimun",lat:3.575201,lng:98.683883,cat:"TRANSPORT"},
-    {nama:"Merdeka Walk",lat:3.590168,lng:98.678031,cat:"TRANSPORT"}
+    {nama:"Belawan",lat:3.775,lng:98.69,cat:"TRANSPORT"}
   ];
   window.KM_POI = POI;
   window.POI_ALL = POI;
-  window.KM_POI_VERSION = "V62";
+  window.KM_POI_VERSION = "V63";
   window.KM_POI_COUNT = POI.length;
   function haversineMeter(a,b,c,d){
     var R=6371000, toRad=function(x){return x*Math.PI/180;};
