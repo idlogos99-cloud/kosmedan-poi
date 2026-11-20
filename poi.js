@@ -1,10 +1,6 @@
 // KosMedan - POI V63 - SATU SUMBER
-// File ini dipakai bersama oleh: Admin, Cari Kos, Detail Kos
-// V63 FIX Transport: Istana Maimun / Masjid Raya / Lapangan Merdeka / Merdeka Walk DIHAPUS dari TRANSPORT. Itu LANDMARK, bukan tempat naik angkot. Transport cuma 5: Stasiun Medan, Terminal Amplas, Terminal Pinang Baris, Kualanamu, Belawan.
-// Total: 75 POI = 29 Kampus + 26 RS + 15 Mall + 5 Transport.
 (function(){
   var POI = [
-    // KAMPUS - 29
     {nama:"USU",lat:3.5617,lng:98.6563,cat:"KAMPUS"},
     {nama:"UNIMED",lat:3.607528,lng:98.71675,cat:"KAMPUS"},
     {nama:"UMSU",lat:3.614314,lng:98.675407,cat:"KAMPUS"},
@@ -34,7 +30,6 @@
     {nama:"AMIK Tunas",lat:3.59,lng:98.675,cat:"KAMPUS"},
     {nama:"STBA PIA",lat:3.586,lng:98.694,cat:"KAMPUS"},
     {nama:"UPMI",lat:3.567559,lng:98.690563,cat:"KAMPUS"},
-    // RS - 26
     {nama:"RS Adam Malik",lat:3.518414,lng:98.608638,cat:"RS"},
     {nama:"RS Pirngadi",lat:3.598097,lng:98.688395,cat:"RS"},
     {nama:"RS Advent",lat:3.590231,lng:98.649835,cat:"RS"},
@@ -61,7 +56,6 @@
     {nama:"RS Santa Elisabeth",lat:3.5753762,lng:98.6766563,cat:"RS"},
     {nama:"RS Herna",lat:3.585,lng:98.675,cat:"RS"},
     {nama:"RS Hermina",lat:3.61,lng:98.65,cat:"RS"},
-    // MALL - 15
     {nama:"Sun Plaza",lat:3.5918,lng:98.6765,cat:"MALL"},
     {nama:"Centre Point",lat:3.59177,lng:98.6811,cat:"MALL"},
     {nama:"Delipark",lat:3.59416,lng:98.67466,cat:"MALL"},
@@ -77,7 +71,6 @@
     {nama:"Focal Point",lat:3.58,lng:98.676,cat:"MALL"},
     {nama:"Millennium",lat:3.615452,lng:98.649702,cat:"MALL"},
     {nama:"Yuki Simpang",lat:3.54,lng:98.70,cat:"MALL"},
-    // TRANSPORT - 5 ONLY (Landmark DIHAPUS: Istana Maimun, Masjid Raya, Lapangan Merdeka, Merdeka Walk bukan transport)
     {nama:"Terminal Amplas",lat:3.539207,lng:98.718201,cat:"TRANSPORT"},
     {nama:"Terminal Pinang Baris",lat:3.588969,lng:98.610167,cat:"TRANSPORT"},
     {nama:"Stasiun Medan",lat:3.590878,lng:98.679742,cat:"TRANSPORT"},
