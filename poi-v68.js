@@ -1,4 +1,4 @@
-// KosMedan - POI V68 - FIX ALL V67 - Cek Google Semua 83 POI
+// KosMedan - POI V69 - FIX V68 - Hapus AMIK Tunas (Siantar) & Permata Bunda (Tutup), Fix 6 POI ngarang
 (function(){
   var POI = [
     {nama:"USU",lat:3.561508,lng:98.656755,cat:"KAMPUS"},
@@ -23,14 +23,13 @@
     {nama:"Methodist (Univ)",lat:3.57874,lng:98.670603,cat:"KAMPUS"},
     {nama:"ITM",lat:3.569498,lng:98.696153,cat:"KAMPUS"},
     {nama:"Mikroskil",lat:3.587708,lng:98.690743,cat:"KAMPUS"},
-    {nama:"Al Azhar",lat:3.585123,lng:98.700456,cat:"KAMPUS"},
+    {nama:"Al Azhar",lat:3.5285,lng:98.650919,cat:"KAMPUS"},
     {nama:"UNHAR HM Joni",lat:3.568151,lng:98.694772,cat:"KAMPUS"},
     {nama:"UNHAR Imam Bonjol",lat:3.576436,lng:98.677374,cat:"KAMPUS"},
     {nama:"Poltekkes",lat:3.510112,lng:98.616716,cat:"KAMPUS"},
     {nama:"Poltekpar",lat:3.613569,lng:98.718246,cat:"KAMPUS"},
     {nama:"LP3M",lat:3.5805,lng:98.6685,cat:"KAMPUS"},
-    {nama:"AMIK Tunas",lat:3.590123,lng:98.675456,cat:"KAMPUS"},
-    {nama:"STBA PIA",lat:3.586123,lng:98.694123,cat:"KAMPUS"},
+    {nama:"STBA PIA",lat:3.614358,lng:98.669572,cat:"KAMPUS"},
     {nama:"UPMI",lat:3.567559,lng:98.690563,cat:"KAMPUS"},
     {nama:"Universitas Sutomo",lat:3.609251,lng:98.680215,cat:"KAMPUS"},
     {nama:"Univ Tjut Nyak Dien",lat:3.5968,lng:98.6465,cat:"KAMPUS"},
@@ -46,13 +45,12 @@
     {nama:"RS Mitra Medika Amplas",lat:3.537726,lng:98.711832,cat:"RS"},
     {nama:"RS USU",lat:3.567326,lng:98.657204,cat:"RS"},
     {nama:"RS Haji",lat:3.613508,lng:98.714609,cat:"RS"},
-    {nama:"RS Royal Prima",lat:3.588123,lng:98.664234,cat:"RS"},
-    {nama:"RS Permata Bunda",lat:3.538123,lng:98.712345,cat:"RS"},
+    {nama:"RS Royal Prima",lat:3.598056,lng:98.654217,cat:"RS"},
     {nama:"RS Bhayangkara",lat:3.57424,lng:98.657789,cat:"RS"},
     {nama:"RS Mitra Sejati",lat:3.540994,lng:98.67987,cat:"RS"},
-    {nama:"RS Sufina Azis",lat:3.595123,lng:98.690123,cat:"RS"},
+    {nama:"RS Sufina Azis",lat:3.616769,lng:98.663139,cat:"RS"},
     {nama:"RS Estomihi",lat:3.556722,lng:98.695106,cat:"RS"},
-    {nama:"RS Martha Friska",lat:3.65,lng:98.68,cat:"RS"},
+    {nama:"RS Martha Friska",lat:3.633167,lng:98.66903,cat:"RS"},
     {nama:"RS Eshmun",lat:3.686763,lng:98.655777,cat:"RS"},
     {nama:"RS Kesdam",lat:3.5935,lng:98.6805,cat:"RS"},
     {nama:"RS Imelda",lat:3.622999,lng:98.674899,cat:"RS"},
@@ -60,7 +58,7 @@
     {nama:"RS Sari Mutiara",lat:3.598972,lng:98.634959,cat:"RS"},
     {nama:"RS Methodist",lat:3.5838,lng:98.6895,cat:"RS"},
     {nama:"RS Santa Elisabeth",lat:3.5753762,lng:98.6766563,cat:"RS"},
-    {nama:"RS Herna",lat:3.585123,lng:98.675234,cat:"RS"},
+    {nama:"RS Herna",lat:3.584579,lng:98.666099,cat:"RS"},
     {nama:"RS Hermina",lat:3.595289,lng:98.62775,cat:"RS"},
     {nama:"Sun Plaza",lat:3.582,lng:98.67137,cat:"MALL"},
     {nama:"Centre Point",lat:3.59157,lng:98.68069,cat:"MALL"},
@@ -87,7 +85,7 @@
   ];
   window.KM_POI = POI;
   window.POI_ALL = POI;
-  window.KM_POI_VERSION = "V68";
+  window.KM_POI_VERSION = "V69";
   window.KM_POI_COUNT = POI.length;
   function haversineMeter(a,b,c,d){
     var R=6371000, toRad=function(x){return x*Math.PI/180;};
