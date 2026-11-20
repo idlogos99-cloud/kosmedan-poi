@@ -1,4 +1,4 @@
-// KosMedan - POI V64 - SATU SUMBER
+// KosMedan - POI V65 - SATU SUMBER
 (function(){
   var POI = [
     {nama:"USU",lat:3.5617,lng:98.6563,cat:"KAMPUS"},
@@ -25,7 +25,7 @@
     {nama:"Mikroskil",lat:3.586,lng:98.692,cat:"KAMPUS"},
     {nama:"Al Azhar",lat:3.585,lng:98.70,cat:"KAMPUS"},
     {nama:"UNHAR",lat:3.576,lng:98.685,cat:"KAMPUS"},
-    {nama:"Poltekkes",lat:3.53,lng:98.60,cat:"KAMPUS"},
+    {nama:"Poltekkes",lat:3.510112,lng:98.616716,cat:"KAMPUS"},
     {nama:"Poltekpar",lat:3.613569,lng:98.718246,cat:"KAMPUS"},
     {nama:"LP3M",lat:3.5805,lng:98.6685,cat:"KAMPUS"},
     {nama:"AMIK Tunas",lat:3.59,lng:98.675,cat:"KAMPUS"},
@@ -80,7 +80,7 @@
   ];
   window.KM_POI = POI;
   window.POI_ALL = POI;
-  window.KM_POI_VERSION = "V64";
+  window.KM_POI_VERSION = "V65";
   window.KM_POI_COUNT = POI.length;
   function haversineMeter(a,b,c,d){
     var R=6371000, toRad=function(x){return x*Math.PI/180;};
