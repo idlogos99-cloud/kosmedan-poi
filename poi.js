@@ -1,32 +1,26 @@
-// KosMedan - POI V61 - SATU SUMBER
-// File ini dipakai bersama oleh: Admin V5.5, Cari Kos, Detail Kos
-// Cara pakai: load file ini SEBELUM script utama, dengan <script src="URL_POI_JS"></script>
-// Setelah itu POI tersedia di window.KM_POI dan window.POI_ALL.
-// Kalau ada POI yang berubah, edit HANYA file ini. Jangan copy-paste array POI ke file lain.
-// V61 FIX: UNPRI dibenerin - tadinya 1 titik salah di 3.5985,98.6775 (geser 2 km ke timur, deket RS Sari Mutiara)
-// Sekarang jadi 3 titik bener dari Google: Sampul (Utama) 3.598865,98.652759 / Sekip 3.596737,98.665097 / Danau Singkarak 3.604054,98.654208
-// Bukti: Kos Solo 3.59861,98.65912 ke UNPRI Sampul cuma 707m, bukan ke USU 4km. Jadi Kos Solo sekarang kebaca UNPRI.
-// V60 FIX: UPMI dibenerin ke Jl Teladan (tadinya 3.58,98.66 di Padang Bulan, bikin BENHOUSE jadi UPMI - padahal Google 5,4 km)
-// RS Mitra Sejati dibenerin ke Jl AH Nasution Medan Johor (tadinya 3.575,98.65 di Padang Bulan, bikin BENHOUSE jadi Mitra Sejati)
-// V59: Poltekpar + RS Haji dibalikin ke Medan Estate, RS Adam Malik ke Sunggal, UMSU / UMA / UNPRI / UISU dibenerin.
-// Total: 79 POI = 28 Kampus + 26 RS + 15 Mall + 10 Transport.
+// KosMedan - POI V62 - SATU SUMBER
+// File ini dipakai bersama oleh: Admin, Cari Kos, Detail Kos
+// V62 FIX Google: UMSU, UMA pecah 2 kampus, Potensi Utama, RS Adam Malik, RS Eshmun, RS Haji, RS Murni Teguh, RS Bhayangkara, Hermes, Cambridge, Millennium, Medan Fair, USU/POLMED dipisah
+// V62 FIX Kategori: Podomoro City HAPUS dari TRANSPORT (itu Mall, udah ada Delipark di MALL). Istana Maimun / Masjid Raya / Lapangan Merdeka / Merdeka Walk tetap di TRANSPORT sebagai landmark, jangan dipakai sebagai patokan transport utama.
+// Total: 79 POI = 29 Kampus + 26 RS + 15 Mall + 9 Transport.
 (function(){
   var POI = [
-    // KAMPUS - 28
-    {nama:"USU",lat:3.562,lng:98.658,cat:"KAMPUS"},
+    // KAMPUS - 29
+    {nama:"USU",lat:3.5617,lng:98.6563,cat:"KAMPUS"},
     {nama:"UNIMED",lat:3.607528,lng:98.71675,cat:"KAMPUS"},
-    {nama:"UMSU",lat:3.5785,lng:98.6845,cat:"KAMPUS"},
+    {nama:"UMSU",lat:3.614314,lng:98.675407,cat:"KAMPUS"},
     {nama:"UINSU",lat:3.604994,lng:98.721378,cat:"KAMPUS"},
-    {nama:"POLMED",lat:3.562,lng:98.659,cat:"KAMPUS"},
+    {nama:"POLMED",lat:3.563007,lng:98.655713,cat:"KAMPUS"},
     {nama:"UISU",lat:3.5623,lng:98.6938,cat:"KAMPUS"},
-    {nama:"UMA",lat:3.5795,lng:98.6865,cat:"KAMPUS"},
+    {nama:"UMA Kampus I",lat:3.605,lng:98.72,cat:"KAMPUS"},
+    {nama:"UMA Kampus II",lat:3.576549,lng:98.643466,cat:"KAMPUS"},
     {nama:"UNPAB",lat:3.590239,lng:98.645394,cat:"KAMPUS"},
     {nama:"Nommensen",lat:3.595,lng:98.682,cat:"KAMPUS"},
     {nama:"UNIKA",lat:3.544689,lng:98.621723,cat:"KAMPUS"},
     {nama:"UNPRI",lat:3.598865,lng:98.652759,cat:"KAMPUS"},
     {nama:"UNPRI Sekip",lat:3.596737,lng:98.665097,cat:"KAMPUS"},
     {nama:"UNPRI Danau Singkarak",lat:3.604054,lng:98.654208,cat:"KAMPUS"},
-    {nama:"Potensi Utama",lat:3.658,lng:98.685,cat:"KAMPUS"},
+    {nama:"Potensi Utama",lat:3.637902,lng:98.667025,cat:"KAMPUS"},
     {nama:"UNIVA",lat:3.5455,lng:98.701,cat:"KAMPUS"},
     {nama:"Darma Agung",lat:3.57892,lng:98.664713,cat:"KAMPUS"},
     {nama:"Univ Sari Mutiara",lat:3.605,lng:98.65,cat:"KAMPUS"},
@@ -42,24 +36,24 @@
     {nama:"STBA PIA",lat:3.586,lng:98.694,cat:"KAMPUS"},
     {nama:"UPMI",lat:3.567559,lng:98.690563,cat:"KAMPUS"},
     // RS - 26
-    {nama:"RS Adam Malik",lat:3.5985,lng:98.6585,cat:"RS"},
+    {nama:"RS Adam Malik",lat:3.518414,lng:98.608638,cat:"RS"},
     {nama:"RS Pirngadi",lat:3.598097,lng:98.688395,cat:"RS"},
     {nama:"RS Advent",lat:3.590231,lng:98.649835,cat:"RS"},
     {nama:"RS Columbia",lat:3.592,lng:98.678,cat:"RS"},
     {nama:"RS Siloam",lat:3.585943,lng:98.673644,cat:"RS"},
     {nama:"RS Bunda Thamrin",lat:3.585271,lng:98.651063,cat:"RS"},
-    {nama:"RS Murni Teguh",lat:3.592,lng:98.68,cat:"RS"},
+    {nama:"RS Murni Teguh",lat:3.590542,lng:98.68155,cat:"RS"},
     {nama:"RS Mitra Medika",lat:3.59,lng:98.66,cat:"RS"},
-    {nama:"RS USU",lat:3.567988,lng:98.657492,cat:"RS"},
-    {nama:"RS Haji",lat:3.5405,lng:98.6925,cat:"RS"},
+    {nama:"RS USU",lat:3.567326,lng:98.657204,cat:"RS"},
+    {nama:"RS Haji",lat:3.613508,lng:98.714609,cat:"RS"},
     {nama:"RS Royal Prima",lat:3.588,lng:98.664,cat:"RS"},
     {nama:"RS Permata Bunda",lat:3.575,lng:98.685,cat:"RS"},
-    {nama:"RS Bhayangkara",lat:3.57,lng:98.66,cat:"RS"},
+    {nama:"RS Bhayangkara",lat:3.57424,lng:98.657789,cat:"RS"},
     {nama:"RS Mitra Sejati",lat:3.540994,lng:98.67987,cat:"RS"},
     {nama:"RS Sufina Azis",lat:3.595,lng:98.69,cat:"RS"},
     {nama:"RS Estomihi",lat:3.57,lng:98.69,cat:"RS"},
     {nama:"RS Martha Friska",lat:3.65,lng:98.68,cat:"RS"},
-    {nama:"RS Eshmun",lat:3.70,lng:98.65,cat:"RS"},
+    {nama:"RS Eshmun",lat:3.686763,lng:98.655777,cat:"RS"},
     {nama:"RS Kesdam",lat:3.5935,lng:98.6805,cat:"RS"},
     {nama:"RS Imelda",lat:3.60,lng:98.68,cat:"RS"},
     {nama:"RS Bina Kasih",lat:3.595,lng:98.675,cat:"RS"},
@@ -71,20 +65,20 @@
     // MALL - 15
     {nama:"Sun Plaza",lat:3.5918,lng:98.6765,cat:"MALL"},
     {nama:"Centre Point",lat:3.59177,lng:98.6811,cat:"MALL"},
-    {nama:"Delipark",lat:3.59415,lng:98.67459,cat:"MALL"},
+    {nama:"Delipark",lat:3.59416,lng:98.67466,cat:"MALL"},
     {nama:"Medan Mall",lat:3.58795,lng:98.6865,cat:"MALL"},
-    {nama:"Medan Fair",lat:3.59287,lng:98.66373,cat:"MALL"},
+    {nama:"Medan Fair",lat:3.593189,lng:98.663489,cat:"MALL"},
     {nama:"Manhattan",lat:3.591114,lng:98.62661,cat:"MALL"},
     {nama:"Lippo Plaza",lat:3.588,lng:98.675,cat:"MALL"},
-    {nama:"Cambridge",lat:3.585,lng:98.65,cat:"MALL"},
+    {nama:"Cambridge",lat:3.584769,lng:98.667519,cat:"MALL"},
     {nama:"Grand Palladium",lat:3.592,lng:98.672,cat:"MALL"},
     {nama:"Thamrin Plaza",lat:3.586609,lng:98.692026,cat:"MALL"},
     {nama:"Ringroad City",lat:3.575775,lng:98.625573,cat:"MALL"},
-    {nama:"Hermes Place",lat:3.575,lng:98.675,cat:"MALL"},
+    {nama:"Hermes Place",lat:3.57068,lng:98.66623,cat:"MALL"},
     {nama:"Focal Point",lat:3.58,lng:98.676,cat:"MALL"},
-    {nama:"Millennium",lat:3.605,lng:98.655,cat:"MALL"},
+    {nama:"Millennium",lat:3.615452,lng:98.649702,cat:"MALL"},
     {nama:"Yuki Simpang",lat:3.54,lng:98.70,cat:"MALL"},
-    // TRANSPORT - 10
+    // TRANSPORT - 9 (Podomoro DIHAPUS, itu Mall)
     {nama:"Terminal Amplas",lat:3.539207,lng:98.718201,cat:"TRANSPORT"},
     {nama:"Terminal Pinang Baris",lat:3.588969,lng:98.610167,cat:"TRANSPORT"},
     {nama:"Stasiun Medan",lat:3.590878,lng:98.679742,cat:"TRANSPORT"},
@@ -93,12 +87,11 @@
     {nama:"Lapangan Merdeka",lat:3.59025,lng:98.678586,cat:"TRANSPORT"},
     {nama:"Masjid Raya",lat:3.575111,lng:98.687321,cat:"TRANSPORT"},
     {nama:"Istana Maimun",lat:3.575201,lng:98.683883,cat:"TRANSPORT"},
-    {nama:"Merdeka Walk",lat:3.590168,lng:98.678031,cat:"TRANSPORT"},
-    {nama:"Podomoro City",lat:3.585,lng:98.673,cat:"TRANSPORT"}
+    {nama:"Merdeka Walk",lat:3.590168,lng:98.678031,cat:"TRANSPORT"}
   ];
   window.KM_POI = POI;
   window.POI_ALL = POI;
-  window.KM_POI_VERSION = "V61";
+  window.KM_POI_VERSION = "V62";
   window.KM_POI_COUNT = POI.length;
   function haversineMeter(a,b,c,d){
     var R=6371000, toRad=function(x){return x*Math.PI/180;};
