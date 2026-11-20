@@ -1,7 +1,6 @@
 // KosMedan - POI V67 - FIX V66 - Koordinat diperbaiki + TRANSPORT dipisah + Tambah POI hilang
 (function(){
   var POI = [
-    // KAMPUS
     {nama:"USU",lat:3.5617,lng:98.6563,cat:"KAMPUS"},
     {nama:"UNIMED",lat:3.607528,lng:98.71675,cat:"KAMPUS"},
     {nama:"UMSU",lat:3.614314,lng:98.675407,cat:"KAMPUS"},
@@ -33,12 +32,9 @@
     {nama:"AMIK Tunas",lat:3.590123,lng:98.675456,cat:"KAMPUS"},
     {nama:"STBA PIA",lat:3.586123,lng:98.694123,cat:"KAMPUS"},
     {nama:"UPMI",lat:3.567559,lng:98.690563,cat:"KAMPUS"},
-    // TAMBAHAN V67 - YANG HILANG DI V66
     {nama:"Universitas Sutomo",lat:3.609251,lng:98.680215,cat:"KAMPUS"},
     {nama:"Univ Tjut Nyak Dien",lat:3.5968,lng:98.6465,cat:"KAMPUS"},
     {nama:"Universitas Terbuka Medan",lat:3.574664,lng:98.713739,cat:"KAMPUS"},
-
-    // RS - KOORDINAT DIPERBAIKI V67
     {nama:"RS Adam Malik",lat:3.518414,lng:98.608638,cat:"RS"},
     {nama:"RS Pirngadi",lat:3.598097,lng:98.688395,cat:"RS"},
     {nama:"RS Advent",lat:3.590231,lng:98.649835,cat:"RS"},
@@ -66,8 +62,6 @@
     {nama:"RS Santa Elisabeth",lat:3.5753762,lng:98.6766563,cat:"RS"},
     {nama:"RS Herna",lat:3.585123,lng:98.675234,cat:"RS"},
     {nama:"RS Hermina",lat:3.610123,lng:98.650234,cat:"RS"},
-
-    // MALL
     {nama:"Sun Plaza",lat:3.5918,lng:98.6765,cat:"MALL"},
     {nama:"Centre Point",lat:3.59177,lng:98.6811,cat:"MALL"},
     {nama:"Delipark",lat:3.59416,lng:98.67466,cat:"MALL"},
@@ -83,15 +77,11 @@
     {nama:"Focal Point",lat:3.574,lng:98.626,cat:"MALL"},
     {nama:"Millennium",lat:3.615452,lng:98.649702,cat:"MALL"},
     {nama:"Yuki Simpang",lat:3.575811,lng:98.688001,cat:"MALL"},
-
-    // TRANSPORT - V67: HANYA TRANSPORT HARIAN, KUALANAMU & BELAWAN DIPISAH
     {nama:"Terminal Amplas",lat:3.539207,lng:98.718201,cat:"TRANSPORT"},
     {nama:"Terminal Pinang Baris",lat:3.588969,lng:98.610167,cat:"TRANSPORT"},
     {nama:"Stasiun Medan",lat:3.590878,lng:98.679742,cat:"TRANSPORT"},
     {nama:"Stasiun Helvetia",lat:3.607123,lng:98.643456,cat:"TRANSPORT"},
     {nama:"Stasiun Bandar Khalipah",lat:3.595123,lng:98.705123,cat:"TRANSPORT"},
-
-    // BANDARA & PELABUHAN - DIPISAH, JANGAN DIPAKAI BUAT cariTerdekat TRANSPORT
     {nama:"Kualanamu",lat:3.637,lng:98.885,cat:"BANDARA_PELABUHAN"},
     {nama:"Belawan",lat:3.775,lng:98.69,cat:"BANDARA_PELABUHAN"}
   ];
