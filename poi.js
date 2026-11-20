@@ -1,11 +1,10 @@
-// KosMedan - POI V65 - SATU SUMBER
+// KosMedan - POI V65 - SATU SUMBER - FIX POLMED
 (function(){
   var POI = [
     {nama:"USU",lat:3.5617,lng:98.6563,cat:"KAMPUS"},
     {nama:"UNIMED",lat:3.607528,lng:98.71675,cat:"KAMPUS"},
     {nama:"UMSU",lat:3.614314,lng:98.675407,cat:"KAMPUS"},
     {nama:"UINSU",lat:3.604994,lng:98.721378,cat:"KAMPUS"},
-    {nama:"POLMED",lat:3.563007,lng:98.655713,cat:"KAMPUS"},
     {nama:"UISU",lat:3.5623,lng:98.6938,cat:"KAMPUS"},
     {nama:"UISU Gedung Johor",lat:3.535707,lng:98.663057,cat:"KAMPUS"},
     {nama:"UMA Kampus I",lat:3.605,lng:98.72,cat:"KAMPUS"},
